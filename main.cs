@@ -1,3 +1,4 @@
+// main.sc
 using System;
 using System.Net;
 using System.Text;
@@ -7,7 +8,7 @@ class Program
     public static void Main(string[] args)
     {
         Console.WriteLine("HttpListener starting...");
-        
+
         String[] s3_facts = new String[] {
             "Scale storage resources to meet fluctuating needs with 99.999999999% (11 9s) of data durability.",
             "Store data across Amazon S3 storage classes to reduce costs without upfront investment or hardware refresh cycles.",
@@ -20,7 +21,7 @@ class Program
         var listener = new HttpListener();
         listener.Prefixes.Add("http://*:8002/");
         listener.Start();
-        
+
         Console.WriteLine("HttpListener started.");
 
         try
@@ -45,7 +46,6 @@ class Program
         }
         catch (Exception exc)
         {
-            // Log the exception or handle it as needed
             Console.WriteLine($"Exception: {exc}");
         }
         finally
